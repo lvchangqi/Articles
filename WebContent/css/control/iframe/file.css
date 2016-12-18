@@ -1,0 +1,43 @@
+header {
+	text-align: center;
+}
+
+header span {
+	font-size: 34px;
+}
+
+#main {
+	height: 370px;
+	width: auto;
+}
+#main article {
+	height: 900px;
+}
+
+section {
+	margin-top: 456px;
+	margin-left: 380px;
+}
+
+section button {
+	margin-left: 45px;
+	border: 1px sold #198fea;
+	background-color: #198fea;
+	border-radius: 4px;
+	width: 140px;
+	height: 40px;
+	color: #FFFFFF;
+	font-size: 17px;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+input[name='cor_author']{
+	margin-left: 137px;
+	margin-bottom: 10px;
+	width: 215px;
+	border: 1px solid;
+	border-radius: 2px;
+}
+#ipt-uuid{
+	width: 100px;
+}

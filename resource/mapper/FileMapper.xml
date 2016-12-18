@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qingtao.dao.FileMapper">
+	<resultMap id="BaseResultMap" type="com.qingtao.pojo.File">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="filename" property="filename" jdbcType="VARCHAR" />
+		<result column="url" property="url" jdbcType="VARCHAR" />
+		<result column="number" property="number" jdbcType="VARCHAR" />
+		<result column="version" property="version" jdbcType="INTEGER" />
+		<result column="progress" property="progress" jdbcType="INTEGER" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="time" property="time" jdbcType="TIMESTAMP" />
+		<result column="times" property="times" jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, filename, url, number, version, progress, username,
+		time, times
+	</sql>
+
+	<select id="readFile" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from u_file
+		where number = #{0} and times = #{1}
+	</select>
+
+	<select id="readCount" resultType="java.lang.Integer">
+		SELECT COUNT(id) as count from
+		u_file
+	</select>
+
+	<select id="readTimes" resultType="java.lang.Integer"
+		parameterType="java.lang.String">
+		SELECT MAX(times) as max FROM u_file where number =
+		#{number,jdbcType=VARCHAR}
+	</select>
+
+	<select id="readForPage" resultType="java.lang.Integer"
+		parameterType="com.qingtao.pojo.File">
+		select count(*) from u_file where version =
+		#{version,jdbcType=INTEGER}
+		<if test="username != null">
+			and username = #{username,jdbcType=VARCHAR}
+		</if>
+	</select>
+
+	<select id="readByPaper" resultMap="BaseResultMap" parameterType="java.util.Map">
+		select
+		f.*
+		from u_file f, u_paper p 
+		where f.number = p.number
+		and p.ename = '${ename}' 
+		and p.version = ${version}
+		group by number limit ${pre}, ${limit}
+	</select>
+	
+	<select id="readForSearch" parameterType="java.util.Map" resultMap="BaseResultMap">
+		select 
+		<include refid="Base_Column_List" />
+		from u_file where ${condition} like '%${value}%' and version = ${version}
+	</select>
+	
+	<select id="readAll" resultMap="BaseResultMap" parameterType="java.util.Map">
+		select
+		<include refid="Base_Column_List" />
+		from u_file where
+		<choose>
+			<when test="username != null and version == null">
+				username = '${username}'
+			</when>
+			<when test="version != null and username == null">
+				version = ${version}
+			</when>
+			<when test="version != null and username != null">
+				version = ${version} and username = '${username}'
+			</when>
+		</choose>
+		<if test="progress != null">
+			and progress not in (${progress})
+		</if>
+		group by number limit ${pre}, ${limit}
+	</select>
+
+	<insert id="createFile" parameterType="com.qingtao.pojo.File">
+		insert into u_file
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="filename != null">
+				filename,
+			</if>
+			<if test="url != null">
+				url,
+			</if>
+			<if test="number != null">
+				number,
+			</if>
+			<if test="version != null">
+				version,
+			</if>
+			<if test="progress != null">
+				progress,
+			</if>
+			<if test="username != null">
+				username,
+			</if>
+			<if test="time != null">
+				time,
+			</if>
+			<if test="times != null">
+				times,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="filename != null">
+				#{filename,jdbcType=VARCHAR},
+			</if>
+			<if test="url != null">
+				#{url,jdbcType=VARCHAR},
+			</if>
+			<if test="number != null">
+				#{number,jdbcType=VARCHAR},
+			</if>
+			<if test="version != null">
+				#{version,jdbcType=INTEGER},
+			</if>
+			<if test="progress != null">
+				#{progress,jdbcType=INTEGER},
+			</if>
+			<if test="username != null">
+				#{username,jdbcType=VARCHAR},
+			</if>
+			<if test="time != null">
+				#{time,jdbcType=TIMESTAMP},
+			</if>
+			<if test="times != null">
+				#{times,jdbcType=INTEGER},
+			</if>
+		</trim>
+	</insert>
+
+	<update id="updateProgress">
+		update u_file set progress = #{1} where number = #{0}
+	</update>
+
+</mapper>

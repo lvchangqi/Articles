@@ -1,0 +1,219 @@
+/*-header-*/
+header{
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+}
+header .logo{
+	width: 1000px;
+    height: 208px;
+	background-image: url(../img/banner.png);
+	background-size: 1000px 208px;
+	background-repeat: no-repeat;
+}
+header .banner{
+	background-color:#57C5AA;
+	box-shadow: 0px 0px 10px #888;
+	height: 34px;
+}
+header ul{
+	position: absolute;
+	margin: 3px 20px;
+}
+header ul li{
+	float:left;
+	margin: auto 20px;
+	font-size: 14px;
+	line-height: 32px;
+	font-weight: 700;
+}
+header ul li a{
+	color: #FFFFFF;
+}
+header ul li:hover{
+	border-bottom: 2px solid green;
+}
+header ul li a:hover{
+	color: #FFFF99;
+}
+/*--end--*/
+/*--online--*/
+.container{
+	width: 1000px;
+	margin: 20px auto;
+}
+.online{
+	float: left;
+	position: absolute;
+	width: 222px;
+	height: 200px;
+	border: 1px solid #9CCEE9;
+	border-radius: 6px;
+}
+.title {
+	position: relative;
+	top:-20px;
+	height: auto;
+	margin: 26px 20px -10px 20px;
+	border-radius: 5px;
+	background-color: #60D2D0;
+}
+.title span{
+	color: white;
+	margin: auto 7px;
+	font-size: 16px;
+}
+.title span a{
+	color: white;
+	float: right;
+	margin-right: 10px;
+}
+.title span a:hover{
+	color: #FFFF99;
+}
+.online ul li{
+	margin: 4px 20px;
+	height: 40px;
+	border: 1px solid #E5EAEE;
+	border-radius: 5px;
+	background-color: #FBFCFE;
+	font-size: 19px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 39px;
+}
+.online ul li:hover{
+	color:#48AEC4;
+}
+.container .message{
+	float: left;
+	position: absolute;
+	margin-left: 243px;
+	width: 520px;
+	height: 250px;
+	border: 1px solid #9CCEE9;
+	border-radius: 6px;
+}
+.container .message img{
+	float: left;
+	margin: -30px 20px;
+}
+.container .message ul{
+	float: left;
+	margin: auto 7px;
+}
+.container .message ul li{
+	list-style-type: disc;
+	margin: 10px auto;
+}
+.container .message ul li time{
+	float: right;
+	margin-left: 46px;
+}
+.container .message ul li a:hover{
+	color: #FF0000;
+}
+.container .message .book_name{
+	position: absolute;
+	bottom: 7px;
+	left: 30px;
+	font-weight: 600;
+}
+.container .message .me{
+	width: 320px;
+	float: right;
+}
+.container .broad{
+	float: right;
+	width: 222px;
+	height: 240px;
+	border: 1px solid #9CCEE9;
+	border-radius: 6px;
+}
+.container .broad .bo{
+	margin-left: 5px;
+	width: 210px;
+}
+.container .broad ul{
+	margin: auto 6px;
+}
+.container .broad ul li{
+	margin: 10px auto;
+}
+.container .broad ul li a:hover{
+	color: #FF0000;
+}
+/*-code-*/
+.code{
+	border: 1px solid;
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	height: 120px;
+	background-color: #FBFCFE;
+}
+.code img{
+	width: 100px;
+	height: 100px;
+}
+.code .head span{
+	margin-left: 6px;
+	font-size: 10px;
+}
+.code .head a{
+	cursor: pointer;
+	font-size: 10px;
+	text-shadow: 0 0 1px black;
+	color: white;
+}
+.code .head a:hover{
+	color: #FCA0A0;
+}
+/***头结束***/
+.container .main{
+	width: 500px;
+	height: 260px;
+	margin: 65px auto;
+}
+.container .main .form-group{
+	margin: 20px 20px;
+}
+.container .main .form-group input{
+	text-indent: 1.7em;
+	font-size: 15px;
+	width: 350px;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+.container .main .form-group #inputCode{
+	width: 180px;
+}
+.container .main .form-group span{
+	position: absolute;
+	margin: 8px 0 0 4px;
+	font-size: 20px;
+	color: gray;
+}
+.container .main .form-group .getCode{
+	width: 110px;
+	height: 36px;
+	border-radius: 4px;
+	border: 1px solid gray;
+	background-color: #CCCCCC;
+}
+.container .main .form-group .btnCode{
+	width: 425px;
+	height: 36px;
+	border-radius: 4px;
+	background-color: #3f89ec;
+	border: 1px solid #3f89ec;
+	color: #fff;
+	font-size: 15px;
+}
+.container .main .form-group .btnCode:hover{
+	background-color: #0066CC;
+}
+.container .main .form-group .getCode:hover{
+	background-color: #CCCCFF;
+}

@@ -1,0 +1,212 @@
+/*-header-*/
+header {
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+}
+
+header .logo {
+	width: 1000px;
+	height: 208px;
+	background-image: url(../img/banner.png);
+	background-size: 1000px 208px;
+	background-repeat: no-repeat;
+}
+
+header .banner {
+	background-color: #57C5AA;
+	box-shadow: 0px 0px 10px #888;
+	height: 34px;
+}
+
+header ul {
+	position: absolute;
+	margin: 3px 20px;
+}
+
+header ul li {
+	float: left;
+	margin: auto 20px;
+	font-size: 14px;
+	line-height: 32px;
+	font-weight: 700;
+}
+
+header ul li a {
+	color: #FFFFFF;
+}
+
+header ul li:hover {
+	border-bottom: 2px solid green;
+}
+
+header ul li a:hover {
+	color: #FFFF99;
+}
+/*--end--*/
+.containers {
+	width: 1340px;
+	height: auto;
+}
+
+.containers .banner {
+	background-image: url(../img/banner.jpg);
+	background-repeat: no-repeat;
+	height: 290px;
+	width: 998px;
+	margin: 0 auto;
+}
+/*--online--*/
+.container {
+	width: 1000px;
+	margin: 20px auto;
+}
+
+.online {
+	float: left;
+	position: absolute;
+	width: 222px;
+	height: 200px;
+	border: 1px solid #9CCEE9;
+	border-radius: 6px;
+}
+
+.title {
+	position: relative;
+	top: -20px;
+	height: auto;
+	margin: 26px 20px -10px 20px;
+	border-radius: 5px;
+	background-color: #60D2D0;
+}
+
+.title span {
+	color: white;
+	margin: auto 7px;
+	font-size: 16px;
+}
+
+.title span a {
+	color: white;
+	float: right;
+	margin-right: 10px;
+}
+
+.title span a:hover {
+	color: #FFFF99;
+}
+
+.online ul li {
+	margin: 4px 20px;
+	height: 40px;
+	border: 1px solid #E5EAEE;
+	border-radius: 5px;
+	background-color: #FBFCFE;
+	font-size: 19px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 39px;
+}
+
+.online ul li:hover {
+	color: #48AEC4;
+}
+
+.container .message {
+	float: left;
+	position: absolute;
+	margin-left: 243px;
+	width: 740px;
+	height: 250px;
+	border: 1px solid #9CCEE9;
+	border-radius: 6px;
+}
+
+.container .message img {
+	float: left;
+	margin: -30px 20px;
+}
+
+.container .message ul {
+	float: left;
+	margin: auto 7px;
+}
+
+.container .message ul li {
+	list-style-type: disc;
+	margin: 10px auto;
+}
+
+.container .message ul li time {
+	float: right;
+	margin-left: 46px;
+}
+
+.container .message ul li a:hover {
+	color: #FF0000;
+}
+
+.container .message .book_name {
+	position: absolute;
+	bottom: 7px;
+	left: 30px;
+	font-weight: 600;
+}
+.container .message .title-main{
+	width: 93%;
+	height:80%;
+	margin-left: 21px;
+}
+
+.container .message .me {
+	width: 690px;
+}
+/*
+.container .broad {
+	float: right;
+	width: 222px;
+	height: 240px;
+	border: 1px solid #9CCEE9;
+	border-radius: 6px;
+}
+
+.container .broad .bo {
+	margin-left: 5px;
+	width: 210px;
+}
+
+.container .broad ul {
+	margin: auto 6px;
+}
+
+.container .broad ul li {
+	margin: 10px auto;
+}
+
+.container .broad ul li a:hover {
+	color: #FF0000;
+}
+*/
+/*-code-*/
+.code{
+	border: 1px solid seagreen;
+	position: fixed;
+	bottom: 32%;
+	right: 10px;
+	height: 200px;
+	width: 164px;
+}
+.code .head span{
+	margin-left: 42px;
+	font-size: 19px;
+}
+.code .head span a{
+	float: right;
+	font-size: 10px;
+	margin-top: 6px;
+	margin-right: 6px;
+}
+.code .head a{
+	cursor: pointer;
+	font-size: 9px;
+}

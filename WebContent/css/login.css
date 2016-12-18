@@ -1,0 +1,127 @@
+/*-header-*/
+header{
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+}
+header .logo{
+	width: 1000px;
+    height: 208px;
+	background-image: url(../img/banner.png);
+	background-size: 1000px 208px;
+	background-repeat: no-repeat;
+}
+header .banner{
+	background-color:#57C5AA;
+	box-shadow: 0px 0px 10px #888;
+	height: 34px;
+}
+header ul{
+	position: absolute;
+	margin: 3px 20px;
+}
+header ul li{
+	float:left;
+	margin: auto 20px;
+	font-size: 14px;
+	line-height: 32px;
+	font-weight: 700;
+}
+header ul li a{
+	color: #FFFFFF;
+}
+header ul li:hover{
+	border-bottom: 2px solid green;
+}
+header ul li a:hover{
+	color: #FFFF99;
+}
+
+.containers {
+	width: 1340px;
+	height: auto;
+}
+
+.containers .banner {
+	background-image: url(../img/banner.jpg);
+	background-repeat: no-repeat;
+	height: 290px;
+	width: 998px;
+	margin: 0 auto;
+}
+/*--container--*/
+.container{
+	margin: 0 auto;
+	width: 1000px;
+	height: auto;
+}
+.container form{
+	margin: 50px auto;
+	width: 480px;
+}
+.container form input{
+	margin: 15px 0;
+	width: 350px;
+	height: 42px;
+	border-radius: 3px;
+	border: 1px solid;
+	font-size: 17px;
+	text-indent: 2.4em;
+}
+.container form input:FOCUS{
+	border: 1px solid #4490F7;
+}
+.container form span{
+	font-size: 25px;
+	position: absolute;
+	margin: 25px 8px;
+	color: gray;
+}
+.container form font{
+	font-size: 17px;
+}
+.container strong{
+	float:left;
+	margin: -20px 0 0 400px;
+	font-size: 15px;
+	color: red;
+}
+.container form .btn{
+	width: 600px;
+	margin-left: 3px; 
+}
+.container form .btn input{
+	width: 140px;
+}
+.container form .btn img{
+	width: 150px;
+	height: 40px;
+	float: left;
+	margin: 16px 10px 0 50px;
+}
+.container form .btn input{
+	text-indent: 0.3em;
+}
+.container form .btn button{
+	margin-left: 50px;
+	border: 1px solid #198fea;
+	background-color: #198fea;
+	border-radius: 4px;
+	width: 140px;
+	height: 40px;
+	color: #FFFFFF;
+	font-size: 17px;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+.container form .btn .btn_submit{
+	background-color: #F7F7F7;
+	border: 1px solid #DDDDDD;
+	color:#666;
+}
+.container form .btn a{
+	color: #198fea;
+}
+.container form .btn a:hover {
+	color: red;
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qingtao.dao.PaperMapper">
+	<resultMap id="BaseResultMap" type="com.qingtao.pojo.Paper">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="ename" property="ename" jdbcType="VARCHAR" />
+		<result column="number" property="number" jdbcType="VARCHAR" />
+		<result column="version" property="version" jdbcType="INTEGER" />
+		<result column="time" property="time" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, ename, number, version, time
+	</sql>
+
+	<select id="readForPage" resultType="java.lang.Integer">
+		select count(*) from u_paper
+		where
+		ename = #{0} and version = #{1}
+	</select>
+
+	<select id="readCountForNew" resultType="java.util.Map">
+		SELECT COUNT(isread) as counts, 
+		number from u_msg 
+		where number IN
+		<foreach collection="array" item="number" open="(" separator="," close=")">
+			#{number}
+		</foreach> 
+		and isread = 0 GROUP BY number
+	</select>
+
+	<insert id="createPaper" parameterType="com.qingtao.pojo.Paper">
+		insert into u_paper
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="ename != null">
+				ename,
+			</if>
+			<if test="number != null">
+				number,
+			</if>
+			<if test="version != null">
+				version,
+			</if>
+			<if test="time != null">
+				time,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="ename != null">
+				#{ename,jdbcType=VARCHAR},
+			</if>
+			<if test="number != null">
+				#{number,jdbcType=VARCHAR},
+			</if>
+			<if test="version != null">
+				#{version,jdbcType=INTEGER},
+			</if>
+			<if test="time != null">
+				#{time,jdbcType=TIMESTAMP},
+			</if>
+		</trim>
+	</insert>
+
+</mapper>

@@ -1,0 +1,66 @@
+header{
+	margin: 30px auto 0 auto;
+	width: 1080px;
+	font-size: 20px;
+	text-align: center;
+	border-bottom: 1px solid;
+}
+.container{
+	margin: 0 333px;
+	width: 800px;
+	height: auto;
+	float: left;
+}
+.container .public{
+	float: left;
+	margin: 20px 20px;
+	width: 300px;
+}
+.container .public .title{
+	display: block;
+	margin: 10px auto;
+	font-size: 17px;
+}
+.container .public li{
+	margin: 13px auto;
+}
+.container .public li input,select{
+	margin: auto 10px;
+	width: 200px;
+	height: 30px;
+	border: 1px solid #222222;
+	border-radius: 2px;
+	text-indent: 23px;
+	font-size: 15px;
+}
+.container .public .icon{
+	position: absolute; 
+	margin: 10px 14px;
+	font-size: 15px;
+	color: #888888;
+}
+.container .right{
+	float: right;
+}
+.btn{
+	float:left;
+	margin-left: 140px;
+	bottom: 10px;
+}
+.btn .submit {
+	margin-left: 50px;
+	border: 1px solid #198fea;
+	background-color: #198fea;
+	border-radius: 4px;
+	width: 140px;
+	height: 40px;
+	color: #FFFFFF;
+	font-size: 17px;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+.btn .reset{
+	background-color: #F7F7F7;
+	border: 1px solid #DDDDDD;
+	color:#666;
+}
