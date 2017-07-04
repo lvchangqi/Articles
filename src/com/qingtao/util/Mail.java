@@ -62,7 +62,7 @@
 /*     */     
 /*  63 */     Transport transport = session.getTransport();
 /*     */     
-/*  65 */     transport.connect("smtp.qq.com", "tiantang201@qq.com", "daxieA0201");
+/*  65 */     transport.connect("smtp.qq.com", "account", "password");
 /*     */     
 /*  67 */     Message message = createMail(session);
 /*     */     
@@ -74,7 +74,7 @@
 /*     */   {
 /*  75 */     MimeMessage mime = new MimeMessage(session);
 /*     */     
-/*  77 */     mime.setFrom(new InternetAddress("tiantang201@qq.com"));
+/*  77 */     mime.setFrom(new InternetAddress("account"));
 /*     */     
 /*  79 */     mime.setRecipient(Message.RecipientType.TO, new InternetAddress(this.toAddress));
 /*     */     
